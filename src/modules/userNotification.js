@@ -5,7 +5,7 @@ const showNotification = (meassage) => {
   setTimeout(() => {
     postMessage.classList.add('hidden');
     postMessage.innerHTML = '';
-  }, 1000);
+  }, 2000);
 };
 
 export default showNotification;

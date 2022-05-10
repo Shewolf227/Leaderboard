@@ -11,10 +11,18 @@
 
 :root {
   --Kalam-font: 'Kalam', cursive;
+  --secondary: #d2d8dd;
+  --tertiary: #d3d3d3;
+  --success: #0d7d4d;
+  --danger: #ab0d02;
+  --dark: #0b0011;
+  --white: #fff;
 }
 
 body {
   font-family: var(--Kalam-font);
+  color: var(--secondary);
+  background: var(--dark);
 }
 
 .container {
@@ -53,7 +61,7 @@ ul {
 }
 
 .result-list {
-  border: 2px solid grey;
+  border: 2px solid var(--tertiary);
 }
 
 .result-list li {
@@ -62,7 +70,8 @@ ul {
 }
 
 .result-list li:nth-child(even) {
-  background: #cdcdcd;
+  color: var(--dark);
+  background: var(--tertiary);
 }
 
 .entries {
@@ -82,10 +91,11 @@ ul {
 }
 
 .form-control {
-  font-size: 12px;
-  padding: 5px;
+  font-size: 14px;
+  padding: 15px;
   margin: 8px 0;
   border-radius: 5px;
+  border: none;
 }
 
 .form-submit {
@@ -96,12 +106,19 @@ ul {
 .btn {
   padding: 5px 15px;
   font-size: 16px;
-  border: 2px solid black;
   cursor: pointer;
+  background: var(--success);
+  color: var(--secondary);
+  border-radius: 5px;
+  border: none;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.7;
+}
+
+.btn:active {
+  transform: translateY(4px);
 }
 
 .hidden {
@@ -113,6 +130,14 @@ ul {
   margin-bottom: 20px;
   text-align: center;
   border-radius: 10px;
-  background: var(--white);
-  box-shadow: 8px 10px 20px 0 rgb(46 61 73 / 20%);
+}
+
+.error-message {
+  color: var(--secondary);
+  background: var(--danger);
+}
+
+.success-message {
+  color: var(--secondary);
+  background: var(--success);
 }
